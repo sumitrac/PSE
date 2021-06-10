@@ -1,9 +1,9 @@
-import string
+
 def is_Palindrome(input_string):
     input_string = input_string.lower() #convert string to lowercase
     #s = s.translate(None, string.punctuation) #removes all punctuation
     punc = '''!()-[]{};:'"\, <>./?@#$%^&*_~'''
-  
+
 # Removing punctuations in string
 # Using loop + punctuation string
     for element in input_string: 
@@ -13,7 +13,9 @@ def is_Palindrome(input_string):
     input_string = input_string.replace(" ", "") #removes all white space 
         
     print(input_string)
+    print("****")
     print(input_string[::-1])
+    print("**")
     return input_string == input_string[::-1] #checks string to reverse string 
 
 string_1 = "Apple"

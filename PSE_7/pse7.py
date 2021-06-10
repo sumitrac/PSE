@@ -12,7 +12,7 @@ def reshape_matrix(matrix, r, c):
     row_num = len(matrix)
     column_num = len(matrix[0])
 
-    if row_num * column_num != r * c:
+    if row_num * column_num != r * c: #edge case 
         return matrix
 
     reshape = []

@@ -8,16 +8,19 @@ seq_b = "GACTCCTCCTCCTCCTGCTCA"
 # print()
 
 def sequence_compare(seq_a, seq_b):
-        len1 = len(seq_a)
-        len2 = len(seq_b)
-        mismatches = []
-        for pos in range(0, min(len1, len2)):
-            if seq_a[pos] != seq_b[pos]:
-                mismatches.append('^')
-            else:
-                mismatches.append(' ')
-        print(seq_a)
-        print("".join(mismatches))
-        print(seq_b)
+    # count = 0
+    len1 = len(seq_a)
+    len2 = len(seq_b)
+    mismatches = []
+
+    for pos in range(0, max(len1, len2)):
+        if seq_a[pos] != seq_b[pos]:
+            mismatches.append('^')
+        else:
+            mismatches.append(' ')
+    print(seq_a)
+    print("".join(mismatches))
+    print(seq_b)
+    # count += 0 
 
 sequence_compare(seq_a,seq_b)
